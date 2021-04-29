@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>39A3D855-F9D6-48F2-99D3-B2F84307D635</title>
+    <defs>
+        <filter x="-14.9%" y="-12.2%" width="129.8%" height="124.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.168627451   0 0 0 0 0.180392157   0 0 0 0 0.811764706  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="st-d.home--selected" transform="translate(-694.000000, -98.000000)">
+            <g id="card" filter="url(#filter-1)" transform="translate(455.000000, 114.000000)">
+                <g id="checkmark" transform="translate(275.000000, 20.000000)">
+                    <circle id="Oval" fill="#37F6B8" cx="15" cy="15" r="15"></circle>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="3" points="8 14.5 13 19.5 22 11"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

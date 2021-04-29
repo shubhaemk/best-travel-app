@@ -1,0 +1,203 @@
+.location-card {
+  width: 100%;
+  min-height: 35rem;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  background-color: $color-background-secondary;
+
+  border-radius: $border-radius-regular;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s;
+
+  cursor: pointer;
+
+  @media (min-width: $break-point-1) {
+    padding: 1.5rem;
+  }
+
+  & > * {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+
+      @media (min-width: $break-point-1) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+
+    background-image: $color-background-gradient;
+
+    box-shadow: $shadow-small;
+  }
+
+  &:hover &-title {
+    color: $color-text-secondary;
+  }
+
+  &:hover &-image {
+    &-checkbox {
+      display: block;
+    }
+  }
+
+  &-small {
+    min-height: auto;
+    height: 7rem;
+
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: flex-start;
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    @media (min-width: $break-point-1) {
+      height: 9rem;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 15rem;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: $border-radius-regular;
+
+    @media (min-width: $break-point-1) {
+      height: 20rem;
+    }
+
+    &-small {
+      width: 5rem;
+      height: 5rem;
+
+      border-radius: $border-radius-small;
+
+      @media (min-width: $break-point-1) {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+
+    &-value {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+    }
+
+    &-checkbox {
+      display: none;
+
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      z-index: 100;
+
+      width: 2rem;
+      height: 2rem;
+
+      border-radius: $border-radius-round;
+
+      border: 0.1rem solid $color-background-secondary;
+    }
+
+    &-check {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      z-index: 100;
+
+      width: 2rem;
+      height: 2rem;
+
+      background-color: $color-icon-check;
+      border-radius: $border-radius-round;
+    }
+  }
+
+  &-title {
+    font-size: $font-size-medium;
+    font-family: $font-family-title;
+    font-weight: 500;
+    color: $color-accent-primary;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+
+    @media (min-width: $break-point-1) {
+      font-size: $font-size-huge;
+
+      margin: 0 2rem;
+    }
+
+    &-small {
+      font-size: $font-size-small;
+
+      @media (min-width: $break-point-1) {
+        font-size: $font-size-medium;
+      }
+    }
+  }
+
+  &-description {
+    font-size: $font-size-small;
+    font-family: $font-family-regular;
+    color: $color-text-tertiary;
+    font-weight: 300;
+
+    margin: 0 1rem;
+
+    @media (min-width: $break-point-1) {
+      font-size: $font-size-medium;
+
+      margin: 0 2rem;
+    }
+  }
+
+  &-action {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: auto;
+
+    &-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      @media (min-width: $break-point-1) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &-small {
+      width: 30%;
+      margin-left: auto;
+      margin-top: 0;
+    }
+  }
+}

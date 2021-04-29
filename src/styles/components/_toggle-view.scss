@@ -1,0 +1,61 @@
+.toggle {
+  border-radius: $border-radius-medium;
+
+  overflow: hidden;
+
+  padding: 0.5rem;
+
+  background-color: $color-background-secondary;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $break-point-1) {
+    padding: 1rem;
+  }
+
+  &-item {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    border-radius: $border-radius-round;
+
+    cursor: pointer;
+
+    background-color: $color-background-secondary;
+
+    transition: all 0.5s;
+
+    @include position-center;
+
+    @media (min-width: $break-point-1) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &-selected {
+      background-color: $color-accent-primary;
+    }
+
+    &-icon {
+      width: 50%;
+      height: 50%;
+
+      fill: $color-icon-unselected;
+
+      &-selected {
+        fill: $color-icon-selected;
+      }
+
+      @media (min-width: $break-point-1) {
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+}
