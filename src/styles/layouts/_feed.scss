@@ -11,12 +11,22 @@
   padding: 2rem 0;
   padding-right: 2rem;
 
+  @media (max-width: $break-point-4) {
+    margin: 0;
+    padding: 0;
+  }
+
   &-column {
     display: flex;
     flex-direction: column;
 
     &:not(:last-child) {
       margin-right: 2rem;
+
+      @media (max-width: $break-point-4) {
+        margin-right: 0;
+        padding: 0 2rem;
+      }
     }
   }
 
@@ -29,6 +39,8 @@
     height: 7rem;
 
     margin-left: -17rem;
+
+    z-index: 1000;
 
     @media (max-width: $break-point-4) {
       display: none;

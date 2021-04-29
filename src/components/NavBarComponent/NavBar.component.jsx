@@ -25,8 +25,6 @@ const NavBarComponent = (props) => {
           const isNotification =
             name === NOTIFICATION_SELECTOR && notificationCount > 0;
 
-          console.log({ name });
-
           return (
             <li
               key={id}

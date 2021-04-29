@@ -34,6 +34,10 @@
       color: $color-text-secondary;
       font-family: $font-family-regular;
       font-size: $font-size-medium;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 

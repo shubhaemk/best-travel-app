@@ -52,7 +52,6 @@ const HomeScreen = (props) => {
   };
 
   const getColumnCount = (windowSize) => {
-    console.log({ windowSize });
     if (windowSize <= 370) {
       return 1;
     }
@@ -149,14 +148,17 @@ const HomeScreen = (props) => {
         );
       })}
 
-      {selectedLocation.length > 0 && (
-        <div className="feed-floating-bar">
-          <SelectedCardBarComponent
-            selectedCardCount={selectedLocation.length}
-            removeLocation={removeLocation}
-          />
-        </div>
-      )}
+      <div
+        className="feed-floating-bar"
+        style={{
+          visibility: selectedLocation.length > 0 ? "initial" : "hidden",
+        }}
+      >
+        <SelectedCardBarComponent
+          selectedCardCount={selectedLocation.length}
+          removeLocation={removeLocation}
+        />
+      </div>
     </div>
   );
 };
